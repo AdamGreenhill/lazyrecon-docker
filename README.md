@@ -30,10 +30,21 @@ docker run -it \
         -d $domain
 ```
 
-Build project from source:
+## Building from source
+
+Run the following to build the project from source:
 
 ```
 git clone https://github.com/AdamGreenhill/lazyrecon-docker
 cd lazyrecon-docker
-docker build -t thegreatrecon .
+docker build -t lazyrecon-docker .
+```
+
+Execute the following to run the container locally:
+
+```
+docker run -it \
+        -v "${pwd}:/output" \
+        lazyrecon-docker \
+        -d $domain
 ```
